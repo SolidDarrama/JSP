@@ -1,0 +1,425 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<style>
+			body {
+	
+			}
+/* 	HOMEPAGE - FONT FIX FOR THE HEADER SECTION */
+			.header_font1{
+				text-align: center;
+				font-size: 30px;
+				height: 1px;
+			}
+			
+			.header_font2{
+				text-align: center;
+				font-weight: bold;
+				font-size: 65px;
+			}
+/* 	ALL PAGES - NAVIGATION BAR */
+			ul {
+			    list-style-type: none;
+			    margin: 0;
+			    padding: 0;
+			    overflow: hidden;
+			    background-color: black;
+			}
+			
+			li {
+			    float: left;
+			    border-right:1px solid #bbb;
+			}
+			
+			li:last-child {
+				float: right;
+			    border-right: none;
+			}
+			
+			li a {
+			    display: block;
+			    color: #F5F5DC;
+			    text-align: center;
+			    padding: 14px 16px;
+			    text-decoration: none;
+			}
+			
+			li a:hover:not(.active) {
+			    background-color: #8FBC8F;
+			}
+			
+			.active {
+			    background-color: #2F4F4F;
+			}
+		
+/*  HOMEPAGE - DIV SECTION_ONE */
+		
+			.section_one {
+				background-image: url('bg-image1.jpeg');
+				background-position: center;
+				background-size:cover;
+				width: auto;
+				height: 250px;
+			}
+	
+/* 	HOMEPAGE - DIV SECTION_ONE - HOVER ZOOM EFFECT IMAGE */
+			
+			.hover-zoom {
+			  -webkit-transition: all 0.9s ease-in-out;
+			  transition: all 0.9s ease-in-out;
+			  background-size: 125%;
+			  background-position: center;
+			  position: relative;
+			}
+			
+			.hover-zoom:hover {
+			  background-size: 100%;
+			}
+	
+/*  HOMEPAGE - DIV SECTION_ONE - HOVER DISAPPER/APPEAR TEXT */
+	
+			.hover-text {
+			  position:absolute;
+			  width:100%;
+			  bottom:-25%;
+			  text-align:center;
+			  font-size: 65px;
+			  color: #F5F5DC;
+			  visibility: hidden;
+			  opacity: 0;
+			  transition: opacity 1.5s, visibility 1.5s;
+			}
+			
+			.section_one:hover .hover-text{
+			  visibility: visible;
+			  opacity: 1;
+			}
+			
+/* 	HOMEPAGE - CF - HANDLES THE IMAGE TRANSITION AFFECT */
+	
+			#cf {
+			  text-align:center;
+			  padding: 35px 0px 35px 0px;
+			}
+			
+			#cf img {
+			  -webkit-transition: opacity 1s ease-in-out;
+			  -moz-transition: opacity 1s ease-in-out;
+			  -o-transition: opacity 1s ease-in-out;
+			  transition: opacity 1s ease-in-out;
+			}
+			
+			#cf img {
+			    animation-name: cf3FadeInOut;
+			    animation-timing-function: ease-in-out;
+			    animation-iteration-count: infinite;
+			    animation-duration: 10s;
+			    animation-direction: alternate;
+				/* position:absolute; */
+			}
+			
+			#cf img:nth-of-type(1) {
+			    animation-delay: 5s;
+			}
+			#cf img:nth-of-type(2) {
+			    animation-delay: 3s;
+			}
+			#cf img:nth-of-type(3) {
+			    animation-delay: 1s;
+			}
+			#cf img:nth-of-type(4) {
+			    animation-delay: -1s;
+			}
+	
+			@keyframes cf3FadeInOut {
+			    0% {
+			        opacity: 1;
+			    }
+			    25% {
+			        opacity: 0;
+			    }
+			    75% {
+			        opacity: 0;
+			    }
+			    100% {
+			        opacity: 1;
+			    }
+			}
+			
+			#cf img {
+			    width: 250px;
+				height: auto;
+			}
+			
+/* 	HOMEPAGE - FOOTER SECTION */
+			
+			.section_footer{
+			height:100px;
+			width:auto;
+			background-color: black;
+			font-size:25px;
+			color: white;
+			padding-top:20px;
+			color: #F5F5DC;
+			}
+			.section_footer p{
+			text-align:center;
+			}
+		
+/* 	LOGIN PAGE - LOGIN FORUM STYLE */
+			@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+			
+			.login-page {
+			  width: 360px;
+			  padding: 8% 0 0;
+			  margin: auto;
+			}
+			.form {
+			  position: relative;
+			  z-index: 1;
+			  background: black;
+			  max-width: 360px;
+			  margin: 0 auto 100px;
+			  padding: 45px;
+			  text-align: center;
+			  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+			}
+			.form input {
+			  font-family: "Roboto", sans-serif;
+			  outline: 0;
+			  background: #f2f2f2;
+			  width: 100%;
+			  border: 0;
+			  margin: 0 0 15px;
+			  padding: 15px;
+			  box-sizing: border-box;
+			  font-size: 14px;
+			}
+			.form button {
+			  font-family: "Roboto", sans-serif;
+			  text-transform: uppercase;
+			  outline: 0;
+			  background: #2F4F4F;
+			  width: 100%;
+			  border: 0;
+			  padding: 15px;
+			  color: #FFFFFF;
+			  font-size: 14px;
+			  -webkit-transition: all 0.3 ease;
+			  transition: all 0.3 ease;
+			  cursor: pointer;
+			}
+			.form button:hover,.form button:active,.form button:focus {
+			  background: #43A047;
+			}
+			.form .message {
+			  margin: 15px 0 0;
+			  color: #b3b3b3;
+			  font-size: 12px;
+			}
+			.form .message a {
+			  color: #4CAF50;
+			  text-decoration: none;
+			}
+			.form .register-form {
+			  display: none;
+			}
+			.container {
+			  position: relative;
+			  z-index: 1;
+			  max-width: 300px;
+			  margin: 0 auto;
+			}
+			.container:before, .container:after {
+			  content: "";
+			  display: block;
+			  clear: both;
+			}
+			.container .info {
+			  margin: 50px auto;
+			  text-align: center;
+			}
+			.container .info h1 {
+			  margin: 0 0 15px;
+			  padding: 0;
+			  font-size: 36px;
+			  font-weight: 300;
+			  color: #1a1a1a;
+			}
+			.container .info span {
+			  color: #4d4d4d;
+			  font-size: 12px;
+			}
+			.container .info span a {
+			  color: #000000;
+			  text-decoration: none;
+			}
+			.container .info span .fa {
+			  color: #EF3B3A;
+			}
+/* 	USER HOMEPAGE - STYLE SHEET */
+			h1 {
+			  display: block;
+			  font-size: 50px;
+			  margin: 25px auto 0;
+			  width: 975px;
+			}
+			
+			h1>small {
+			  color: #aaaaaa;
+			  font-size: .5em;
+			}
+			
+			header {
+			  box-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+			  margin:   25px auto 50px;
+			  height:   300px;
+			  position: relative;
+			  width:    975px;
+			}
+			
+			figure.profile-banner {
+			  left:     0;
+			  overflow: hidden;
+			  position: absolute;
+			  top:      0;
+			  z-index:  1;
+			}
+			
+			figure.profile-picture {
+			  background-position: center center;
+			  background-size: cover;
+			  border: 5px #efefef solid;
+			  border-radius: 50%;
+			  bottom: -50px;
+			  box-shadow: inset 1px 1px 3px rgba(0,0,0,0.2), 1px 1px 4px rgba(0,0,0,0.3);
+			  height: 148px;
+			  left: 150px;
+			  position: absolute;
+			  width: 148px;
+			  z-index: 3;
+			}
+			
+			div.profile-stats {
+			  bottom: 0;
+			  border-top: 1px solid rgba(0,0,0,0.5);
+			  left: 0;
+			  padding: 15px 15px 15px 350px;
+			  position: absolute;
+			  right: 0;
+			  z-index: 2;
+			  
+			  /* Generated Gradient */
+			  background: -moz-linear-gradient(top,  rgba(255,255,255,0.5) 0%, rgba(0,0,0,0.51) 3%, rgba(0,0,0,0.75) 61%, rgba(0,0,0,0.5) 100%);
+			  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.5)), color-stop(3%,rgba(0,0,0,0.51)), color-stop(61%,rgba(0,0,0,0.75)), color-stop(100%,rgba(0,0,0,0.5)));
+			  background: -webkit-linear-gradient(top,  rgba(255,255,255,0.5) 0%,rgba(0,0,0,0.51) 3%,rgba(0,0,0,0.75) 61%,rgba(0,0,0,0.5) 100%);
+			 background: -o-linear-gradient(top,  rgba(255,255,255,0.5) 0%,rgba(0,0,0,0.51) 3%,rgba(0,0,0,0.75) 61%,rgba(0,0,0,0.5) 100%);
+			  background: -ms-linear-gradient(top,  rgba(255,255,255,0.5) 0%,rgba(0,0,0,0.51) 3%,rgba(0,0,0,0.75) 61%,rgba(0,0,0,0.5) 100%);
+			  background: linear-gradient(to bottom,  rgba(255,255,255,0.5) 0%,rgba(0,0,0,0.51) 3%,rgba(0,0,0,0.75) 61%,rgba(0,0,0,0.5) 100%);
+			  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80ffffff', endColorstr='#80000000',GradientType=0 );
+			
+			}
+			
+			div.profile-stats ul {
+			  list-style: none;
+			  margin: 0;
+			  padding: 0;
+			}
+			
+			div.profile-stats ul li {
+			  color: #efefef;
+			  display: block;
+			  float: left;
+			  font-size: 24px;
+			  font-weight: bold;
+			  margin-right: 50px;
+			  text-shadow: 1px 1px 2px rgba(0,0,0,0.7)
+			}
+			
+			div.profile-stats li span {
+			  display: block;
+			  font-size: 16px;
+			  font-weight: normal;
+			}
+			
+			div.profile-stats a.follow {
+			  display: block;
+			  float: right;color: #ffffff;
+			  margin-top: 5px;
+			  text-decoration: none;
+			  
+			  /* This is a copy and paste from Bootstrap */
+			  background-color: #49afcd;
+			  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+			  background-color: #49afcd;
+			  background-image: -moz-linear-gradient(top, #5bc0de, #2f96b4);
+			  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#5bc0de), to(#2f96b4));
+			  background-image: -webkit-linear-gradient(top, #5bc0de, #2f96b4);
+			  background-image: -o-linear-gradient(top, #5bc0de, #2f96b4);
+			  background-image: linear-gradient(to bottom, #5bc0de, #2f96b4);
+			  background-repeat: repeat-x;
+			  border-color: #2f96b4 #2f96b4 #1f6377;
+			  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+			  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff5bc0de', endColorstr='#ff2f96b4', GradientType=0);
+			  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+			  display: inline-block;
+			  padding: 4px 12px;
+			  margin-bottom: 0;
+			  font-size: 14px;
+			  line-height: 20px;
+			  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+			  border-radius: 4px;
+			}
+			
+			div.profile-stats a.follow.followed {
+			  
+			  /* Once again copied from Boostrap */
+			  color: #ffffff;
+			  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+			  background-color: #5bb75b;
+			  background-image: -moz-linear-gradient(top, #62c462, #51a351);
+			  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#62c462), to(#51a351));
+			  background-image: -webkit-linear-gradient(top, #62c462, #51a351);
+			  background-image: -o-linear-gradient(top, #62c462, #51a351);
+			  background-image: linear-gradient(to bottom, #62c462, #51a351);
+			  background-repeat: repeat-x;
+			  border-color: #51a351 #51a351 #387038;
+			  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+			  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff62c462', endColorstr='#ff51a351', GradientType=0);
+			  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+			}
+			
+			header>h1 {
+			  bottom: -50px;
+			  color: #354B63;
+			  font-size: 40px;
+			  left: 350px;
+			  position: absolute;
+			  z-index: 5;
+}
+		</style>
+	</head>
+	<body>
+<!-- /* ALL PAGES - NAVIGATION MENU */ -->
+		<ul class="nav">
+		  <li class="active"><a href="home.jsp">Home</a></li>
+		  <li><a href="#news">Music</a></li>
+		  <li><a href="#contact">Contact</a></li>
+		  <li><a href="#about">About</a></li>
+		  <li><a href="#other">Extra</a></li>
+		  <li><a href="#other">Extra</a></li>
+		  <li><a href="#other">Extra</a></li>
+		  <li><a href="login.jsp">Account</a></li>
+		</ul>
+	</body>
+</html>
+
+<!-- /*ALL PAGES - NAVIGATION MENU; HIGHLIGHT CURRENTLY SELECTED ICON */ -->
+<!-- /* JAVASCRIPT CODE */ -->
+	
+<script>
+	$('.nav a').filter(function(){return this.href==location.href}).parent().addClass('active').siblings().removeClass('active')
+		$('.nav a').click(function(){
+		$(this).parent().addClass('active').siblings().removeClass('active')	
+	})
+</script>
