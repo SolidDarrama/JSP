@@ -396,7 +396,28 @@
 			  left: 350px;
 			  position: absolute;
 			  z-index: 5;
-}
+			}
+/* 	ALBUMS_CHOOSE.JSP - CHECKBOX STYLE FORMAT */
+			.checkbox_style { 
+                position: relative; 
+                width: 100px; 
+                height: 100px; 
+                float: left; 
+                margin-left: 10px; 
+                padding-top: 30px;
+                padding-bottom: 30px;
+            }
+/* 	SHIPPING.JSP - SHIPPING FORUM */
+            .shippingForum {
+			  width: 500px;
+			  clear: both;
+			}
+			
+			.shippingForum input {
+			  width: 100%;
+			  clear: both;
+			}
+
 		</style>
 	</head>
 	<body>
@@ -404,11 +425,11 @@
 		<ul class="nav">
 		  <li class="active"><a href="home.jsp">Home</a></li>
 		  <li><a href="#news">Music</a></li>
+		  <li><a href="albums_choose.jsp">Album Store</a></li>
+		  <li><a href="albums_selected.jsp">Shopping Cart</a></li>
+		  <li><a href="shipping.jsp">Shipping</a></li>
 		  <li><a href="#contact">Contact</a></li>
 		  <li><a href="#about">About</a></li>
-		  <li><a href="#other">Extra</a></li>
-		  <li><a href="#other">Extra</a></li>
-		  <li><a href="#other">Extra</a></li>
 		  <li><a href="login.jsp">Login</a></li>
 		</ul>
 	</body>

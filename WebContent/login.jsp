@@ -10,6 +10,7 @@
 		<jsp:include page="style.css"/>
 	</head>
 	<body>
+<!-- 	NOTE: PASSOWORD IS NOT REQUIRED, YET; CREATE AN ACCOUNT MENU IS NOT FUNCTIONAL -->
 		<div class="login-page">
 		  <div class="form">
 		  
